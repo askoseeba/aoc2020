@@ -1,12 +1,12 @@
 import numpy as np
 
 # Test data:
-data = np.fromregex('test-input.txt', r'(\d*)-(\d*) ([a-z]): ([a-z]*)',
+data = np.fromregex('test-input.txt', r'(\d+)-(\d+) ([a-z]): ([a-z]+)',
                     [('min', np.int64), ('max', np.int64), ('letter', 'S20'), ('password', 'S20')]
                    )
 
 # Production data:
-data = np.fromregex('input.txt', r'(\d*)-(\d*) ([a-z]): ([a-z]*)',
+data = np.fromregex('input.txt', r'(\d+)-(\d+) ([a-z]): ([a-z]+)',
                     [('min', np.int64), ('max', np.int64), ('letter', 'S20'), ('password', 'S20')]
                    )
 
