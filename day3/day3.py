@@ -35,7 +35,7 @@ slope_trees = []
 for slope in slopes:
     needed_hor = int((data.shape[0] - 1) * slope['hor'] / slope['vert']) + 1
     trees      = np.concatenate([data for i in range(int(needed_hor / data.shape[1]) + 1)], axis = 1)
-    hor_idx    = [slope['hor'] * i for i in range(int(data.shape[0] / slope['vert']))]
+    hor_idx    = [slope['hor']  * i for i in range(int(data.shape[0] / slope['vert']))]
     vert_idx   = [slope['vert'] * i for i in range(int(data.shape[0] / slope['vert']))]
     slope_trees.append(np.sum(trees[vert_idx, hor_idx] == '#'))
 
