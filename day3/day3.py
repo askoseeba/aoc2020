@@ -39,4 +39,4 @@ for slope in slopes:
     vert_idx   = [slope['vert'] * i for i in range(int(data.shape[0] / slope['vert']))]
     slope_trees.append(np.sum(trees[vert_idx, hor_idx] == '#'))
 
-print('Part 3: %d' % np.prod(slope_trees, dtype = np.int64))
+print('Part 2: %d' % np.prod(slope_trees, dtype = np.int64))
