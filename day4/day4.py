@@ -27,7 +27,7 @@ print('Part 1: %d' %(data.drop('cid', axis = 1).isna().sum(axis = 1) == 0).sum()
 data2 = data.loc[data.drop('cid', axis = 1).isna().sum(axis = 1) == 0, :].copy(deep = True)
 
 data2[['hgt_value', 'hgt_unit']] = data2['hgt'].str.extract(r'(\d+)(.*)')
-data2[['iyr', 'eyr', 'byr', 'hgt_value']] = data2[['iyr', 'eyr', 'byr', 'hgt_value']].astype(int, errors='ignore')
+data2[['iyr', 'eyr', 'byr', 'hgt_value']] = data2[['iyr', 'eyr', 'byr', 'hgt_value']].astype(int)
 
 print('Part 2: %d' %
     data2[  (1920 <= data2['byr'])       & (data2['byr']       <= 2002)                                 &
