@@ -24,8 +24,6 @@ print('Part 1: %d' %(data.drop('cid', axis = 1).isna().sum(axis = 1) == 0).sum()
 # Part 2
 #
 
-import numpy as np
-
 data2 = data.loc[data.drop('cid', axis = 1).isna().sum(axis = 1) == 0, :].copy(deep = True)
 
 data2[['hgt_value', 'hgt_unit']] = data2['hgt'].str.extract(r'(\d+)(.*)')
