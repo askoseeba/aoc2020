@@ -14,6 +14,12 @@ Here, the goal is not to reach finish-line fast, but just reach the working solu
 
 Primary tools that are used: Python 3 as language, Jupyter Lab as coding environment, and NumPy and Pandas as primary frameworks for easier vectorized data processing. This is the initial plan. Probably there will be puzzles that trigger some interesting choices of alternative approaches to be made. In more notable cases, when this happens, I'll add here the relevant keywords.
 
+## Screencasts
+
+I managed to create some screencasts of solving the puzzles in real-time as well:
+- [Day 1](https://youtu.be/uVpnJURhRRs) -- fixing the expense reports: 26 minutes, both parts of the day.
+- [Day 5](https://youtu.be/tDpkhOmM6Ps) -- checking the flight boarding passes and finding the seat. 40 minutes, both parts of the day.
+
 ## Leaderboard
 
 Feel free to join with my "Private Leaderboard" for 2020 if you wish -- for this, enter the code 675348-c36f188e on [this page](https://adventofcode.com/2020/leaderboard/private) and click **[Join]** button (you have to be logged in there).
