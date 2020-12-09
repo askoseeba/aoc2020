@@ -20,6 +20,7 @@ I managed to create some screencasts of solving the puzzles in real-time as well
 - [Day 1](https://youtu.be/uVpnJURhRRs) -- fixing the expense reports: 26 minutes, both parts of the day.
 - [Day 5](https://youtu.be/tDpkhOmM6Ps) -- checking the flight boarding passes and finding the seat. 40 minutes, both parts of the day.
 - [Day 6](https://youtu.be/anJOnFPjJps) -- counting the yes-answers on customs declarations.
+- [Day 8](https://youtu.be/ibJBrXYTu3A) -- fixing the handheld game console's boot code problem.
 
 ## Leaderboard
 
