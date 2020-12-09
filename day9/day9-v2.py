@@ -15,10 +15,9 @@ with open(fname) as f:
 
 import itertools
 
-num = list(itertools.compress(data[preamble_len:], [not any([w1 + w2 == data[i] for w1, w2 in itertools.combinations(data[i - preamble_len:i], 2)]) for i in range(preamble_len, len(data))]))[0]
+num = [data[i] for i in range(preamble_len, len(data)) if data[i] not in {w1 + w2 for w1, w2 in itertools.combinations(data[i - preamble_len:i], 2)}][0]
 
-print('Part 1: %d' % num)
-
+print('Part 1: %d ' % num)
 
 #
 # Part 2, more compact, no speed impact
