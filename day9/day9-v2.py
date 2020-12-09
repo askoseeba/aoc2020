@@ -13,9 +13,7 @@ with open(fname) as f:
 # Part 1 as oneliner, 10 times slower, though.
 #
 
-any([not any([w1 + w2 == data[i] for w1, w2 in itertools.combinations(data[i - preamble_len:i], 2)]) for i in range(preamble_len, len(data))])
-
-print('Part 1: %d' % data[i])
+print('Part 1: %d' % any([not any([w1 + w2 == data[i] for w1, w2 in itertools.combinations(data[i - preamble_len:i], 2)]) for i in range(preamble_len, len(data))]))
 
 
 #
