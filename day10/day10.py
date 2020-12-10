@@ -37,7 +37,7 @@ def current_adapter(i, data, data_len):
     for idx in range(i + 1, i + 4):
         if idx == data_len:
             break
-        if idx < data_len and data[idx] <= data[i] + 3:
+        if data[idx] <= data[i] + 3:
             count += current_adapter(idx, data, data_len)
     counts[i] = count # This turns the impossible brute force into 0 nanoseconds solution.
     return count
