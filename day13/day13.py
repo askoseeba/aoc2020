@@ -64,9 +64,11 @@ def mul_inv(a, b):
 
 
 busids_in_service  = [(int(id), busids.index(id)) for id in busids if id != 'x']
-# The idea for the need of such array comes from AoC 2020 day 13 implementation here:
+
+# The idea for the need of the following array comes from AoC 2020 day 13 implementation here:
 # https://hastebin.com/userumorow.apache (author: Steve Dremelzen)
 busids_less_offset = [id - idx % id for id, idx in busids_in_service]
+
 print('In service (with offsets):', [busids_in_service])
 print('Buss ID-s less offset:    ', busids_less_offset)
 print('Part 2:                   ', int(chinese_remainder([id for id, idx in busids_in_service], busids_less_offset)))
