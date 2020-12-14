@@ -58,14 +58,13 @@ def load_2D_imag(fname, l_strip = True, r_strip = True, padding_symbol = None):
     data = load_2D(fname, l_strip, r_strip, padding_symbol)
     return {x + y * 1j: data[y][x] for y in range(len(data)) for x in range(len(data[y]))}
 
-def neighbours_2D_imag(loc, data, is_sym = None, is_not_sym = None, is_NESW = False):
+def neighbours_2D_imag(loc, data, is_sym = None, is_not_sym = None):
     assert(not is_sym or not is_not_sym)
-    directions = directions_2D_imag_NESW if is_NESW else directions_2D_imag
     if is_sym:
-        return [loc + direction for direction in directions if data[loc + direction] == is_sym]
+        return [loc + direction for direction in directions_2D_imag_NESW if data[loc + direction] == is_sym]
     elif is_not_sym:
-        return [loc + direction for direction in directions if data[loc + direction] != is_not_sym]
-    return [loc + direction for direction in directions]
+        return [loc + direction for direction in directions_2D_imag_NESW if data[loc + direction] != is_not_sym]
+    return [loc + direction for direction in directions_2D_imag_NESW]
 
 def print_2D(data):
     for row in data:
