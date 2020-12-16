@@ -7,7 +7,7 @@ import math
 
 data = aoc.load_1D(fname, sep = '\n\n')
 fields             = {field[:field.index(':')]: set.union(*[(lambda start, stop: set(range(start, stop + 1)))(*[int(num) for num in rng.split('-')])
-                                  for rng in field[field.index(':') + 2:].split(' or ')])
+                                                            for rng in field[field.index(':') + 2:].split(' or ')])
                       for field in data[0].split('\n')}
 my_ticket, tickets = [[[int(num) for num in line.split(',')] for line in section.split('\n')[1:]] for section in data[1:]]
 my_ticket          = my_ticket[0]
