@@ -17,7 +17,8 @@ my_ticket          = my_ticket[0]
 # Part 1
 #
 
-print('Part 1:', sum(v for ticket in tickets for v in ticket if v not in set().union(*fields.values())))
+all_fields_values = set().union(*fields.values())
+print('Part 1:', sum(v for ticket in tickets for v in ticket if v not in all_fields_values))
 
 
 #
