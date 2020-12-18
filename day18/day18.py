@@ -37,5 +37,4 @@ class WeirdInt:
         return WeirdInt(self.num + other.num)
 
 data_op_swapped = [expr.replace('*', '.').replace('+', '*').replace('.', '+') for expr in data]
-
 print('Part 2:', sum([eval(''.join([('WeirdInt(%s)' % sym) if sym.isdigit() else sym for sym in expr])).num for expr in data_op_swapped]))
