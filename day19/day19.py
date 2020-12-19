@@ -23,7 +23,6 @@ for rule in rulesdata:
 #
 
 def check_option(rules, option, message, orule_idx = 0):
-    #print('Check options:', option, message, orule_idx)
     rule_results = check_rule(rules, option[orule_idx], message)
     if orule_idx == len(option) - 1:
         return rule_results
