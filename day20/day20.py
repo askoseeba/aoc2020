@@ -34,7 +34,6 @@ def orient_tile(dir_match, tiledata):
     if dir_match in {'NN', 'EE', 'SS', 'WW'}: # Rotate 180 degrees
         return np.rot90(m = tiledata, k = 2)
     if dir_match in {'NE', 'ES', 'SW', 'WN'}: # Rotate  90 degrees clockwise
-        #print('Kaka ja ventikas?', dir_match)
         return np.rot90(m = tiledata, k = 1, axes = (1, 0))
     if dir_match in {'NS', 'EW', 'SN', 'WE'}: # Don't rotate
         return              tiledata
