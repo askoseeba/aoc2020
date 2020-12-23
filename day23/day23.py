@@ -49,7 +49,7 @@ print('Part 1:', ''.join(['%d' % cups[(i + cups.index(1) + 1) % len(cups)] for i
 # Part 2
 #
 
-data2 = data + list(range(10, 1000001))
+data2 = data + list(range(10, 1000000))
 cups = {cup: data2[(i + 1) % len(data2)] for i, cup in enumerate(data2)}
 
 def select_destination(current, removed_cups, min_cup, max_cup):
