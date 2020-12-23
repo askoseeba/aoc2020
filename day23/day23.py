@@ -83,8 +83,8 @@ def cups_to_list(cups, cup, num_cups = None):
         #print(ret, ptr)
     return ret
         
-min_cup  = min(data)
-max_cup  = len(data)
+min_cup  = min(data2)
+max_cup  = max(data2)
 current  = data2[0]
 for move in range(1, 10000001):
     destination = select_destination(current, [cups[current], cups[cups[current]], cups[cups[cups[current]]]], min_cup, max_cup)
